@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>江西省港口危险货物安全监管信息系统</title>
+  <style>
+    #trust {
+      text-align: left;
+      color: red;
+      padding-left: 7px;
+
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <p style="text-align:center;">
+    <br />
+  </p>
+
+  <p style="text-align:center;">
+    <img src="../images/logo.png" width="50%" alt="" />
+  </p>
+  <h3 style="text-align:center;">
+    <strong><span>江西危货</span><br />
+    </strong>
+  </h3>
+
+  <p style="text-align:center;">
+    <strong><a id="download"
+        href="itms-services://?action=download-manifest&url=https://ctsn.com.cn/jxwh/prod/manifest.plist">
+        <img src="../images/download.png" height="60" alt="" /></a><br />
+    </strong>
+  </p>
+
+
+  <h3 style="text-align:center;">
+    <span>提示：微信扫一扫，点击右上角按钮选择'在<font id="browserName">浏览器</font>打开'，再进行安装</span>
+  </h3>
+  <h3 id="trust"></h3>
+  <script>
+    var iPhone = window.navigator.userAgent.indexOf("iPhone;") != -1;
+    var iPad = window.navigator.userAgent.indexOf("iPad;") != -1;
+    if (!iPhone && !iPad) {
+      download.href = 'https://ctsn.com.cn/jxwh/prod/jxwh.apk';
+    } else {
+      browserName.innerHTML = 'Safari中';
+      trust.innerHTML = '<span >iOS  首次安装要特别信任</span></br><span>安装后，在设置-通用-设备管理,选择China Waterborne Transportation Institute,点击信任</span>';
+    }
+
+  </script>
+</body>
+<html>
